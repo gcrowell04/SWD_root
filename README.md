@@ -54,3 +54,22 @@ CI/CD workflows for backend and frontend.
 Builds Docker images and deploys via SSH.
 
 
+Prometheus:
+
+Scrapes metrics from Django and Nginx
+Configured via monitoring/prometheus.yml
+Accessible at http://localhost:9090
+
+
+
+Grafana:
+
+Visualizes metrics from Prometheus
+Uses provisioned dashboard and datasource files
+Accessible at http://localhost:3000 (default login: admin/admin)
+
+
+
+
+
+
