@@ -20,38 +20,16 @@ Secure your .env file and never commit it to version control.
 
 
 
-🔧 Key Components Recap
-🐍 Django Backend
+📦 Key Components
 
-Uses Gunicorn for production.
-Secure settings in production_settings.py.
-Exposes REST API for frontend consumption.
+Backend: Django app with modular settings for staging and production.
+Frontend: Eleventy static site with source and build directories.
+Nginx: Reverse proxy config and SSL certs.
+Monitoring: Prometheus config and Grafana dashboards.
+CI/CD: GitHub Actions workflows for backend and frontend.
+Environment: Separate .env files for production and staging.
+Docker: Compose files for production, staging, and monitoring.
 
-🌐 Eleventy Frontend
-
-Static site generator.
-Built and served via Docker container.
-
-🔀 Nginx
-
-Acts as reverse proxy.
-Routes traffic to frontend and backend.
-Handles HTTPS via Certbot.
-
-🐳 Docker
-
-Two Dockerfiles for backend and frontend.
-docker-compose.prod.yml orchestrates services.
-
-🔐 HTTPS
-
-Certbot setup instructions included.
-SSL certs stored in certs/.
-
-🚀 GitHub Actions
-
-CI/CD workflows for backend and frontend.
-Builds Docker images and deploys via SSH.
 
 
 Prometheus:
