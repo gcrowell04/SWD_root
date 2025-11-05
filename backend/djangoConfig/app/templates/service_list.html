@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Service List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        strong {
+            font-size: 1.2rem;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available Services</h1>
+    <ul>
+        {% for service in services %}
+            <li>
+                <strong>{{ service.name }}</strong><br>
+                {{ service.description }}<br>
+                Price: ${{ service.price }}
+            </li>
+        {% empty %}
+            <li>No services available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
