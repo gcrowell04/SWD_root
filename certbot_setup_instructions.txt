@@ -1,0 +1,17 @@
+# Certbot Setup Instructions for HTTPS
+
+1. Install Certbot and Nginx plugin:
+   sudo apt update
+   sudo apt install certbot python3-certbot-nginx
+
+2. Obtain SSL certificate:
+   sudo certbot --nginx -d yourdomain.com
+
+3. Verify certificate:
+   sudo certbot certificates
+
+4. Test automatic renewal:
+   sudo certbot renew --dry-run
+
+5. Set up cron job or systemd timer for renewal:
+   systemctl list-timers | grep certbot
