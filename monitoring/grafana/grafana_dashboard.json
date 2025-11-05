@@ -1,1 +1,40 @@
-TODO
+{
+  "dashboard": {
+    "id": null,
+    "uid": null,
+    "title": "Django & Nginx Monitoring",
+    "tags": [
+      "monitoring"
+    ],
+    "timezone": "browser",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Django Request Duration",
+        "targets": [
+          {
+            "expr": "django_http_request_duration_seconds_sum",
+            "legendFormat": "request duration",
+            "refId": "A"
+          }
+        ],
+        "datasource": "Prometheus"
+      },
+      {
+        "type": "graph",
+        "title": "Nginx Connections",
+        "targets": [
+          {
+            "expr": "nginx_connections_active",
+            "legendFormat": "active connections",
+            "refId": "B"
+          }
+        ],
+        "datasource": "Prometheus"
+      }
+    ],
+    "schemaVersion": 16,
+    "version": 1,
+    "refresh": "5s"
+  }
+}
