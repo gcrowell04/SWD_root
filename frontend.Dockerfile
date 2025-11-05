@@ -1,8 +1,9 @@
+# Dockerfile for Eleventy frontend
 FROM node:18-alpine
 
-WORKDIR /app
+WORKDIR /site
 
-COPY frontend/ /app/
+COPY frontend/ /site/
 
 RUN npm install && npx eleventy
 
